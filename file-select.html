@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>File Select</title>
-</head>
-<body>
-  <h1>Select a file below:</h1> 
-  <form action="POST" class="file-select">
-    <label for="file">Select File:</label>
-    <select name="file" id="file">
-
-    </select>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>File Select</title>
+    <!-- Bootstrap 4 CDN-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="display-4 text-center">Awesome App</h1>
+        <p class="lead text-center">
+          Let's party like it's 1995, login and upload some files!
+        </p>
+      </div>
+      <!-- File select -->
+      <div class="col-6">
+        <h3>Select a file below:</h3>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile" />
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+      </div>
+      <br />
+      <!-- Picture select -->
+      <div class="col-6">
+        <h3>Select a picture below:</h3>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customPicture" />
+          <label class="custom-file-label" for="customFile"
+            >Choose picture</label
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
