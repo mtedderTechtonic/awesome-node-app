@@ -1,25 +1,14 @@
-var express = require('express')
-const bodyParser = require('body-parser')
+const express = require("express");
+const bodyParser = require("body-parser");
 
-// console.log(global)
-// const dateHelper = require('./dateModule');
-// const {myDay,myMonth} = require('./dateModule')
-// console.log(myDay())
-// var app = express();
-// app.use(bodyParser.json())
+const app = express();
+const port = 3000;
 
-// app.get('/:walrus', (req, res) => {
-//     console.log(req.params); // always comes back as a string
-//     console.log(req.query); // always comes back as a string (parse to requested data type)
-//     console.log(req.body); // always look at data before inserting into db
-//      return res.status(200).send({myParam: req.params.walrus}) // exit status
-// })
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 
-// module.exports = app;
-
-const log = require('./logger')
-
-console.log(log)
-console.log(module)
-
-log('message')
+app.get("/donkey", (req, res) => {
+  res.status(200).sendFile(__dirname + "/index.html");
+});
+app.listen(port, () => console.log("listening on port " + port));
